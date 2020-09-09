@@ -1,0 +1,139 @@
+﻿@page
+@model RazorVectra.Pages.CartModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+    <link href="/css/style4.css" rel="stylesheet" asp-append-version="true">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="/lib/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Index" id="artists"><b>HOME</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Artists" id="artists"><b>SEE THE LINE-UP</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Ticket" id="ticket"><b>BUY YOUR TICKET</b></a>
+                    </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" asp-page="Cart" id="ticket"><b>CART(@Model.TotalTickets)</b></a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="jumbo">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead"><strong><b>CART 🛒</b></strong></p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div div class="container-fluid" id="mainDiv">
+        @foreach (var product in Model.Tickets)
+        {
+            <div>
+                <img src="@product.Photo" class="img-fluid" style="width:80px; height:80px; margin-left:13px; margin-top:10px;" />
+                <label type="text"><b>PRODUCT:</b> </label>
+                <span class="cart-item-title" id="title" name="title"><b>@product.Title</b></span>
+                <br />
+                <label type="text"><b>PRICE: </b></label>
+                <span class="cart-item-price" id="price" name="price"><b>@product.Price</b></span>
+                <br />
+                <label type="text"><b>QUANTITY:</b> </label>
+                <span class="cart-item-quantity" id="quantity" name="quantity"><b>@product.Quantity</b></span>
+                <br />
+
+                <form method="post" asp-page-handler="Delete" asp-route-ID="@product.ID">
+                    <button class="btn btn-danger" type="submit">REMOVE</button>
+                </form>
+
+            </div>
+            <br>
+            <br>
+
+        }
+        <span><b>TOTAL:</b> <span><b>@Model.Total $</b></span></span>
+        <form method="post">
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <b> <label asp-for="Client.Name"></label></b>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Client.Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Client.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <b> <label asp-for="Client.Address"></label></b>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Client.Address" class="form-control" />
+                </div>
+                <span asp-validation-for="Client.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <b> <label asp-for="Client.Email"></label></b>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Client.Email" class="form-control" />
+                </div>
+                <span asp-validation-for="Client.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="col-6">
+                    <input asp-for="Client.Tickets" class="form-control" type="hidden" value="@Model.Tickets" />
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3 offset-4">
+                    <b>   <input type="submit" value="Order" class="btn btn-primary form-control" /></b>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+    <br />
+    <br />
+
+
+</body>
+
+</html>
+
+

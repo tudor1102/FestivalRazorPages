@@ -1,0 +1,103 @@
+﻿@page
+@model RazorVectra.Pages.TicketModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+     <script src="~/js/Ticket.js" asp-append-version="true" ></script>
+    <link href="/css/style3.css" rel="stylesheet" asp-append-version="true">
+
+    <title>
+        Tickets
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="/lib/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Index" id="artists"><b>HOME</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Artists" id="artists"><b>SEE THE LINE-UP</b></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-page="Ticket" id="ticket"><b>BUY YOUR TICKET</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Cart" id="ticket"><b>CART(<span class="cart-quantity">0</span>)</b></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="lead" id="p4">
+        AA
+    </p>
+    <p class="lead" id="p1">TICKETS</p>
+    <p class="lead" id="p4">
+        AA
+    </p>
+    <br>
+    <br>
+
+
+    <div class="card-deck">
+        @foreach(var ticket in Model.Tickets)
+        {
+            <div class="card">
+                    <img class="card-img-top" src="@ticket.Photo" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@ticket.Title</h5>
+                        <p class="card-text">@ticket.Price$</p>
+                        <input type="hidden" value="@ticket.ID" />
+                    </div>
+                    <div class="card-footer">
+                        <form method="post">
+                        <button class="btn btn-primary " type="submit" id="b1j" asp-route-id="@ticket.ID">BUY NOW!</button>
+                        </form>
+                    </div>
+            </div>
+       
+        }
+    </div>
+    <br>
+    <br>
+
+
+
+<br>
+<br>
+<p class="lead" id="p4">
+    AA
+</p>
+<p class="lead" id="p1">
+    VECTRA FESTIVAL
+</p>
+
+</body>
+
+
+</html>

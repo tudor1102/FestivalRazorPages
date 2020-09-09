@@ -1,0 +1,22 @@
+﻿@font-face {
+    font-family: festFont;
+    src: url("/lib/SnakeVenom-nnKg.ttf");
+}
+
+body {
+    background: url("/lib/zend.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    margin-left: 15%;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    background-color: black;
+    opacity: 0.85;
+    color: white;
+    font-family:festFont;
+    font-size: 50px;
+}

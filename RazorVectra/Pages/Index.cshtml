@@ -1,0 +1,102 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="~/js/Start.js" asp-append-version="true" ></script>
+    <link href="/css/style.css" rel="stylesheet" asp-append-version="true">
+
+    <title>
+        VectraFESTIVAL
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="/lib/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Artists" id="artists"><b>SEE THE LINE-UP</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Ticket" id="ticket"><b>BUY YOUR TICKET</b></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <img src="/lib/rsz_cetatea_medievală_deva_în_lumina_răsăritului.jpg" class="img-fluid" id="cetate">
+    <p class="lead" id="p4">
+        AA
+    </p>
+    <p class="lead" id="p1">
+        VECTRA FESTIVAL
+    </p>
+    <p class="lead" id="p4">
+        AA
+    </p>
+
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="/lib/promo.mp4" allowfullscreen></iframe>
+    </div>
+    <p class="lead" id="p4">
+        AA
+    </p>
+    <div class="container">
+        <div class="jumbotron" id="jumbo">
+            <h1 class="display-4" id="h1j">WELCOME TO THE FIRST EDITION OF VECTRA FESTIVAL!</h1>
+            <p class="lead" id="pj1">LOCATION: DEVA, ROMANIA</p>
+            <p class="lead" id="pj1">DATE: 22.07.2020-26.07.2020</p>
+            <p class="lead" id="pj2">
+                RAP.TRAP.TECHNO.ROCK
+                YOU NAME IT. WE HAVE IT ALL PREPARED FOR YOU.
+            </p>
+            <p class="lead" id="pj2">
+                BRING YOU FRIENDS TO THE CITADEL AND LET YOURSELVES GO.
+                COME AND SEE YOUR FAVOURITE ARTISTS. ENJOY IT.
+            </p>
+            <p class="lead" id="pj2">
+                #VECTRAFESTIVAL
+            </p>
+            <hr class="my-4">
+
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" asp-page="Ticket" role="button" id="b1j">BUY YOUR TICKET!</a>
+            </p>
+        </div>
+    </div>
+    <p class="lead" id="p4">
+        AA
+    </p>
+    <div class="container">
+        <div class="row text-center padding">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="#"><img src="/lib/insta.png"></a>
+                <a href="#"><img src="/lib/fb.png"></a>
+                <a href="#"><img src="/lib/twitter.png"></a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+</html>

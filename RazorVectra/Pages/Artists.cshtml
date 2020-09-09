@@ -1,0 +1,133 @@
+﻿@page
+@model RazorVectra.Pages.ArtistsModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="~/js/Artists.js" asp-append-version="true" ></script>
+    <link href="/css/style2.css" rel="stylesheet" asp-append-version="true">
+
+    <title>
+        Artists
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="/lib/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Index" id="artists"><b>HOME</b></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" asp-page="Artists" id="artists"><b>SEE THE LINE-UP</b></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Ticket" id="ticket"><b>BUY YOUR TICKET</b></a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" asp-page="Cart" id="ticket"><b>CART(<span class="cart-quantity">0</span>)</b></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <img src="/lib/borisbrejcha-showcase19-istanbul-1200x630-1137.jpg" class="img-fluid" id="boris">
+    <p class="lead" id="p1">MAIN EVENT: BORIS BREJCHA</p>
+    <p class="lead" id="p4">
+        AA
+    </p>
+
+
+
+    <p class="lead" id="p1">TRAP SCENE: IAN X AZTECA  NANE</p>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="/lib/ian.jpg" alt="Card image cap">
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_azteca.png" alt="Card image cap">
+
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_nane.jpg" alt="Card image cap">
+        </div>
+    </div>
+    <br>
+    <br>
+    <p class="lead" id="p4">
+        AA
+    </p>
+
+    <p class="lead" id="p1">RAP SCENE: VLADONE AJ TRACEY STORMZY</p>
+
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_1vladonee.jpg" alt="Card image cap">
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_ajtracey.jpg" alt="Card image cap">
+
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_1stormzy.jpg" alt="Card image cap">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <p class="lead" id="p4">
+        AA
+    </p>
+
+
+    <p class="lead" id="p1">TECHNO SCENE: AMELIE LENS PAUL KALKBRENNER VICTOR RUIZ</p>
+
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_amelie.jpg" alt="Card image cap">
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_pk.jpg" alt="Card image cap">
+
+
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="/lib/rsz_victor_ruiz.png" alt="Card image cap">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <p class="lead" id="p4">
+        AA
+    </p>
+
+
+
+    <p class="lead" id="p1">22.07.2020-26.07.2020</p>
+
+</body>
+
+
+</html>
